@@ -1,0 +1,128 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+  background-color: hsl(39, 10%, 51%);
+}
+h1
+{
+  font-size: 28px;
+  color: hsla(42, 14%, 28%);
+}
+#content
+{
+  margin: 80px; 
+  height: 66%; 
+  border: 2px solid hsl(42, 14, 28);
+  border-radius: 25px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,.7), 0px 5px 15px rgba(0,0,0,.1);
+
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  background-color: hsla(40,15%,88%);
+ 
+}
+#projToDos
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+} 
+#projToDos h1
+{
+  font-size: 24px; 
+  font-weight:600;
+  padding: 20px 0px 0px 20px;
+  height: 40px;
+  align-self: flex-start;
+}
+#projToDos #empty
+{
+  display: grid;
+  height: 90%;
+  width: 100%;
+  grid-template-rows: 80px 30px 1fr;
+}
+#projToDos #empty h2
+{
+  padding: 10px 0px 0px 20px;
+  font-size: 18;
+  font-weight: 600;
+  color: hsla(42, 13%, 35%);
+  align-self: flex-end;
+}
+#projToDos #empty h3
+{
+  padding: 10px 0px 0px 20px;
+  font-size: 16;
+  font-weight: 500;
+  color: hsla(41, 12%, 43%);
+}
+#projToDos #empty img
+{
+  filter: grayscale(80%);
+  width: 35%;
+  position: absolute;
+  right:0;
+  bottom: 0;
+} 
+#projToDos #empty button
+{
+  width: fit-content;
+  height: auto;
+  padding: 10px 20px;
+  margin: 20px;
+  align-self: flex-start; 
+  align-text:center;
+  font-size: 16px;
+  font-weight: 600;
+  color: hsla(42, 13%, 35%);
+ 
+  border: 2px solid hsl(42, 14, 28);
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px rgba(0,0,0,.4), 0px 3px 5px rgba(0,0,0,.1);
+}
+#projBar
+{
+  border: none solid none none;
+  border-right: 3px dotted hsl(38, 16%, 70%);
+}
+#projBar h1 
+{
+  font-size: 24px; 
+  font-weight:600;
+  padding: 20px 0px 0px 30px;
+}
+#addButton
+{
+  width: fit-content;
+  height: auto;
+  padding: 10px 20px;
+  margin: 20px;
+  align-self: flex-start; 
+  align-text:center;
+  font-size: 18px;
+  font-weight: 600;
+  color: hsla(41, 12%, 43%);
+
+  border: 2px solid hsl(42, 14, 28);
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px rgba(0,0,0,.4), 0px 3px 5px rgba(0,0,0,.1);
+}
+warmgreys{
+    hsl(42, 14, 28);
+    hsl(42, 13, 35);
+    hsl(41, 12, 43);
+    hsl(39, 10, 51);
+    hsl(39, 12, 58);
+    hsl(39, 14, 64);
+    hsl(38, 16, 70);
+    hsl(39, 16, 75);
+    hsl(40, 15, 88);
