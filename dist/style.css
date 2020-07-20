@@ -9,31 +9,36 @@
 
 body
 {
-  background-color: hsl(39, 10%, 51%);
+  background-image: linear-gradient( 
+  to bottom right, hsl(32,100%,97%),
+  hsl(40, 50%, 67%)
+  );
+  
 }
 h1
 {
   font-size: 28px;
-  color: hsla(42, 14%, 28%);
+  color: hsla(198, 37%, 31%);
 }
 #content
 {
   margin: 80px; 
   height: 66%; 
-  border: 2px solid hsl(42, 14, 28);
   border-radius: 25px;
-  box-shadow: 0px 4px 6px rgba(0,0,0,.7), 0px 5px 15px rgba(0,0,0,.1);
+  box-shadow: 0px 4px 6px rgba(0,0,0,.4), 0px 5px 15px rgba(0,0,0,.1);
 
   display: grid;
-  grid-template-columns: 250px 1fr;
-  background-color: hsla(40,15%,88%);
- 
+  grid-template-columns: 33% 1fr;
+  background-color: hsla(32,100%,97%);
+
 }
+
 #projToDos
 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-right: 20px;
 } 
 #projToDos h1
 {
@@ -43,49 +48,100 @@ h1
   height: 40px;
   align-self: flex-start;
 }
-#projToDos #empty
+#projContainer
 {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  height: 90%;
+  width: 100%;
+  flex-direction: rows;
+}
+#projContainer .project
+{
+  margin: 10px;
+  width: 100%;
+}
+#projContainer .project h2
+{
+  font-size: 16px;
+  color: hsla(198, 37%, 31%);
+}
+#projContainer .todo
+{
+  margin: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-rows: 1fr 1fr;
+  align-content: center;
+}
+#projContainer .todo h3
+{ 
+  font-size: 14px;
+  color: hsla(198, 37%, 36%);
+  width: 50%;
+  padding: 2px 0 2px 0;
+  padding-left: 16px;
+}
+#projContainer .todo h4
+{ 
+  font-size: 14px;
+  color: hsla(198, 40%, 51%);
+  width: 50%;
+  padding: 2px 0 2px 0;
+}
+#projContainer .todo h5
+{ 
+  font-size: 14px;
+  color: hsla(198, 40%, 51%);
+  width: 400px;
+  align-self: rightwards;
+  padding-left: 24px;
+}
+#empty
+{ 
+  display: none;
+ /* ^^^^ grid or none*/
   height: 90%;
   width: 100%;
   grid-template-rows: 80px 30px 1fr;
 }
-#projToDos #empty h2
+#empty h2
 {
-  padding: 10px 0px 0px 20px;
+  padding: 4px 20px 0px 20px;
   font-size: 18;
   font-weight: 600;
-  color: hsla(42, 13%, 35%);
+  color: hsla(198, 39%, 45%);
   align-self: flex-end;
 }
-#projToDos #empty h3
+#empty h3
 {
-  padding: 10px 0px 0px 20px;
-  font-size: 16;
-  font-weight: 500;
-  color: hsla(41, 12%, 43%);
+  padding: 4px 20px 0px 20px;
+  font-size: 14;
+  font-weight: 600;
+  color: hsla(198, 37%, 53%);
 }
-#projToDos #empty img
+#empty img
 {
-  filter: grayscale(80%);
+  filter: grayscale(40%);
   width: 35%;
   position: absolute;
   right:0;
-  bottom: 0;
+  bottom: 20;
 } 
-#projToDos #empty button
+#empty button
 {
   width: fit-content;
   height: auto;
   padding: 10px 20px;
-  margin: 20px;
+  margin: 15px 20px;
   align-self: flex-start; 
-  align-text:center;
+  align-text: center;
   font-size: 16px;
   font-weight: 600;
-  color: hsla(42, 13%, 35%);
- 
-  border: 2px solid hsl(42, 14, 28);
+  color: hsla(193, 37%, 37%);
+  background-color: hsla(193, 60%, 91%);
+
+  border: 0px solid;
   border-radius: 5px;
   box-shadow: 0px 2px 3px rgba(0,0,0,.4), 0px 3px 5px rgba(0,0,0,.1);
 }
@@ -100,8 +156,21 @@ h1
   font-weight:600;
   padding: 20px 0px 0px 30px;
 }
+#projBar h2
+{
+	font-size: 16px;
+	font-weight: 600;
+	color: hsla(198, 37%, 36%);
+	padding-bottom: 10px;
+}
+#projBar #projList
+{
+	margin: 16px 10px 16px 16px;
+}
 #addButton
 {
+  position: fixed;
+  right: 0;
   width: fit-content;
   height: auto;
   padding: 10px 20px;
@@ -110,9 +179,9 @@ h1
   align-text:center;
   font-size: 18px;
   font-weight: 600;
-  color: hsla(41, 12%, 43%);
-
-  border: 2px solid hsl(42, 14, 28);
+  color: hsla(135, 52%, 27%);
+  background-color: hsl(135, 43%, 86%);
+  border: 0px solid hsl(42, 14%, 28%);
   border-radius: 5px;
   box-shadow: 0px 2px 3px rgba(0,0,0,.4), 0px 3px 5px rgba(0,0,0,.1);
 }
